@@ -16,24 +16,6 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
       signIn('github')
       return;
     }
-/* 
-    if(data.activeSubscription) {
-      router.push('/posts');
-      
-      return; 
-    } */
-
-    try {
-      const response = await api.post('/subscribe');
-
-      const { sessionId } = response.data;
-    
-      const stripe = await getStripeJs()
-
-      await stripe.redirectToCheckout({ sessionId });
-    } catch (err) {
-      alert(err.message);
-    }
   }
   return (
     <button
