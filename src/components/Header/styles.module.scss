@@ -3,6 +3,16 @@
   border-bottom: 1px solid var(--gray-800);
 }
 
+.logo{
+  font-size: 1.2rem;
+  color: #ddd;
+  font-weight: 600;
+}
+.logo:hover{
+  filter:brightness(1.2);
+  cursor: pointer;
+}
+
 .headerContent {
   max-width: 1120px;
   height: 5rem;
@@ -11,7 +21,8 @@
 
   display: flex;
   align-items: center;
-  
+
+
   nav {
     margin-left: 5rem;
     height: 5rem;

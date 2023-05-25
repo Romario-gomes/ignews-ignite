@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { stripe } from '../services/stripe';
 import { SubscribeButton } from '../components/SubscribeButton';
 import styles from './home.module.scss'; 
+import Image from 'next/image';
 
 
 //chamadas api
@@ -21,7 +22,7 @@ export default function Home({ product }: HomeProps) {
   return (
     <>
       <Head>
-        <title>Home | ig.news</title>
+        <title>Home | Romario.dev</title>
       </Head>
       <main className={styles.contentContainer}>
         <section className={styles.hero}>
@@ -33,7 +34,7 @@ export default function Home({ product }: HomeProps) {
           </p>
           <SubscribeButton priceId={product.priceId} />
         </section>
-        <img src="/images/mulher.svg" alt="Girl coding" />
+        <Image src="/images/homem_programando.svg" width={400} alt="Girl coding" />
       </main>
     </>
   )
