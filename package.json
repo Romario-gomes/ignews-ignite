@@ -1,5 +1,4 @@
 {
-  "node": "18.x",
   "name": "ignews",
   "version": "0.1.0",
   "private": true,
