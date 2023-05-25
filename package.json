@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-=======
-  "node": "^16.13.0",
->>>>>>> b106dd262cb8bb89b8c7f6e3a6267903befeb8f4
   "name": "ignews",
   "version": "0.1.0",
   "private": true,
