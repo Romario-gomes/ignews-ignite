@@ -29,12 +29,12 @@ export default function Home({ product }: HomeProps) {
           <span>👏 Hey, welcome</span>
           <h1>News about the <span>React</span> world.</h1>
           <p>
-            Get access to all the publications <br />
-            <span>for { product.amount } month</span>
+          Para ter acesso ao conteúdo, é necessário estar autenticado.<br />
+  
           </p>
           <SubscribeButton priceId={product.priceId} />
         </section>
-        <Image src="/images/homem_programando.svg" width="499" height="600" alt="Girl coding" />
+        <Image src="/images/background.png" width="499" height="600" alt="Girl coding" />
       </main>
     </>
   )
