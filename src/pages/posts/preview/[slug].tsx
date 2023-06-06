@@ -1,6 +1,7 @@
 import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next"
-import { getSession, useSession } from "next-auth/react";
+import { getSession, useSession, signIn } from "next-auth/react";
 import { RichText } from "prismic-dom";
+
 import Head from "next/head"
 import { getPrismicClient } from "../../../services/prismic";
 import styles from "../post.module.scss";
@@ -25,6 +26,13 @@ export default function PostPreview({ post }: PostPreviewProps) {
         router.push(`/posts/${post.slug}`)
     }
   }, [session])
+
+
+  async function handleSubscribe() {
+    signIn('github')
+    return;
+  }
+
   return (
    <>
     <Head>
@@ -41,7 +49,7 @@ export default function PostPreview({ post }: PostPreviewProps) {
         <div className={styles.continueReading}>
           Gostaria de continuar lendo?
           <Link href="/">
-            <a >Entre com github 😃</a>
+            <a onClick={handleSubscribe}>Entre com github 😃</a>
           </Link> 
           
         </div>
