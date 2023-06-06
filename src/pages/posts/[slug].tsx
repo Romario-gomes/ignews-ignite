@@ -4,6 +4,7 @@ import { RichText } from "prismic-dom";
 import Head from "next/head"
 import { getPrismicClient } from "../../services/prismic";
 import styles from "./post.module.scss";
+import { redirect } from "next/dist/server/api-utils";
 interface PostProps{
   post: {
     slug: string;
@@ -14,6 +15,8 @@ interface PostProps{
 }
 
 export default function Post({ post }: PostProps) {
+
+
   return (
    <>
     <Head>
@@ -37,6 +40,15 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
   const session = await getSession({ req });
   const { slug } = params;
   console.log(session);
+
+  if(!session?.user) {
+    return{
+      redirect: {
+        destination: `/preview/${slug}`,
+        permanent: false,
+      }
+    } 
+  }
 
   const prismic = getPrismicClient(req);
 

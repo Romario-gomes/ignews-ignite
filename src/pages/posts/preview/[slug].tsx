@@ -20,12 +20,11 @@ interface PostPreviewProps{
 export default function PostPreview({ post }: PostPreviewProps) {
   const { data: session } = useSession();
   const router = useRouter();
-
-  /* useEffect(() => {
-    if(!session?.activeSubscription) {
+  useEffect(() => {
+    if(session?.user) {
         router.push(`/posts/${post.slug}`)
     }
-  }, [session]) */
+  }, [session])
   return (
    <>
     <Head>
@@ -40,9 +39,9 @@ export default function PostPreview({ post }: PostPreviewProps) {
           className={`${styles.postContent} ${styles.previewContent}`}
         dangerouslySetInnerHTML={{ __html: post.content}} />
         <div className={styles.continueReading}>
-          Wanna continue reading?
+          Gostaria de continuar lendo?
           <Link href="/">
-            <a >Subscribe now 😃</a>
+            <a >Entre com github 😃</a>
           </Link> 
           
         </div>
