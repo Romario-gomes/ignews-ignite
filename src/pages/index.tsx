@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <main className={styles.contentContainer}>
         <section className={styles.hero}>
-          <span>👏 Hey, welcome</span>
+          <span>👏 Olá, bem vindo!</span>
           <h1>Artigos sobre o mundo <span>Javascript</span></h1>
           <p>
           Para ter acesso ao conteúdo, é necessário estar autenticado.<br />
