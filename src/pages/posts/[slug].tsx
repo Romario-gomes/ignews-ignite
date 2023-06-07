@@ -43,7 +43,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
   if(!session?.user) {
     return{
       redirect: {
-        destination: `/preview/${slug}`,
+        destination: `posts/preview/${slug}`,
         permanent: false,
       }
     } 
