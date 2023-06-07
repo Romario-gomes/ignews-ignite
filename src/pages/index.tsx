@@ -14,8 +14,7 @@ export default function Home() {
           <span>👏 Olá, bem vindo!</span>
           <h1>Artigos sobre o mundo <span>Javascript</span></h1>
           <p>
-          Para ter acesso ao conteúdo, é necessário estar autenticado.<br />
-  
+            Para ter acesso ao conteúdo, é necessário estar autenticado.<br />
           </p>
           <SubscribeButton />
         </section>
