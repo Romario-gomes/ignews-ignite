@@ -58,10 +58,9 @@ export const getStaticProps: GetStaticProps = async () => {
       pageSize: 100,
   
   });
-  /* console.log(JSON.stringify(response, null, 2)); */
+  console.log(JSON.stringify(response, null, 2));
 
   const posts = response.results.map((post) => {
-    console.log("Retorno da api: ",posts)
     return {
       slug: post.uid,
       title: RichText.asText(post.data.title),
