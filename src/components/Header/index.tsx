@@ -11,7 +11,7 @@ export function Header() {
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <Link href="/" >
-           <span className={styles.logo}>Romario.dev</span> 
+           <span className={styles.logo}></span> 
         </Link>
         
         {/* <img src="/images/logo.svg" alt="ig.news" /> */}

@@ -8,6 +8,11 @@
   color: #ddd;
   font-weight: 600;
 }
+
+.logo:after{
+  content: 'Romario.dev';
+}
+
 .logo:hover{
   filter:brightness(1.2);
   cursor: pointer;
@@ -69,3 +74,36 @@
     margin-left: auto;
   }
 }
+
+@media (max-width: 500px) {
+
+  
+  .logo{
+    font-size: 1rem;
+  }
+  .logo:after{
+    content: 'R';
+  }
+}
+
+@media (max-width: 380px) {
+  .headerContent {
+    nav {
+      margin-left: 1rem;
+      a {
+        & + a {
+          margin-left: 0;
+        }
+      }
+     
+    }
+  }
+  
+  .logo{
+    font-size: 1rem;
+  }
+  .logo:after{
+    content: 'R';
+  }
+}
+
