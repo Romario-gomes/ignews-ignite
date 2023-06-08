@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: space-between;
 }
-
 .hero {
   max-width: 600px;
 
@@ -44,3 +43,31 @@
     margin-top: 2.5rem;
   }
 }
+
+@media (max-width: 1023px) {
+  .imageBackground{
+    display: none;
+  }
+  .hero {
+    button{
+      margin: 2.5rem auto auto auto;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+
+  .contentContainer{
+    justify-content: center;
+    margin-bottom: 5rem;
+  }
+
+  .hero {
+    button{
+      margin: 2.5rem auto auto auto;
+    }
+  }
+}
+
+
+
