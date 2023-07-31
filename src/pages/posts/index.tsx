@@ -49,15 +49,16 @@ export default function Posts({ posts }: PostsProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const client = getPrismicClient();
 
-  const response = await client.get({
-    predicates: [
-      prismic.predicates.at("document.type", "post")
-    ],
-      fetch: ["publication.title", "publication.content"],
+  const response = await client.query(
+    prismic.Predicates.at('document.type', 'post'),
+    {
+      orderings: {
+        field: 'document.first_publication_date',
+        direction: 'desc',
+      },
       pageSize: 100,
-  
-  });
-  console.log(JSON.stringify(response, null, 2));
+    }
+  );
 
   const posts = response.results.map((post) => {
     return {
