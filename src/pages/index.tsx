@@ -21,7 +21,6 @@ export default function Home() {
         <div className={styles.imageBackground}>
           <Image src="/images/background.png" width="499" height="600" alt="Girl coding" />
         </div>
-        
       </main>
     </>
   )
